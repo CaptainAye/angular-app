@@ -1,0 +1,9 @@
+:host{
+    float: left;
+    margin: 20px;
+}
+
+img {
+    height: 5em;
+    width: 5em;
+}

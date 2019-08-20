@@ -1,0 +1,14 @@
+<h2>Engineers room</h2>
+<form #form="ngForm" (ngSubmit)='onSubmit(form.value)'>
+  <div>
+    <span>Count: </span>
+    <input #shipField='' type="number" name='shipCount' ngModel pattern=[1-5] min='1' max='5' required></div>
+    <div>
+      <span>Type: </span>
+      <input type='radio' name='shipType' ngModel required [value]='availableShipTypes.STAR_DESTROYER'> Star destroyer
+    <input type='radio' name='shipType' ngModel required [value]='availableShipTypes.X_WING'> X-wing
+  </div>
+  <button type='submit' [disabled]='form.invalid || isProducing'>Produkuj</button>
+  <div><p *ngIf='isProducing'> Production in progress</p></div>
+  <div><p> Ships in hangar: {{shipCount$ | async}}</p></div>
+</form>

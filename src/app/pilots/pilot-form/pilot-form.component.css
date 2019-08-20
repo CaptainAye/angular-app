@@ -1,0 +1,49 @@
+.pilot-form {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: 15%;
+    left: 25%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1em;
+    border: 0.1em solid  rgba(255, 255, 255, 0.5);
+}
+
+img#pilot-photo{
+    display: inline-block;
+    width: 100%;
+    border-radius: 1em;
+
+}
+
+.button-property-left {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border: 0.1em solid  rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color:rgba(255, 255, 255, 0.7);;
+    font-size: 1.2em;
+}
+
+.button-property-right {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: 0.1em solid  rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color:rgba(255, 255, 255, 0.7);;
+    font-size: 1.2em;
+}
+
+input.control-property{
+    display: inline-block;
+    border-radius: 1em;
+    border: 0.1em solid  rgba(255, 255, 255, 0.5);
+    height: 25%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color:rgba(255, 255, 255, 0.7);;
+    font-size: 1.2em;
+    margin-bottom: 5%;
+    text-align: center;
+}

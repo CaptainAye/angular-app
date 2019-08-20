@@ -1,0 +1,54 @@
+:host {
+    width: 100%;
+    height: 500px;
+}
+
+.world {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.horizontal-rule{
+    position: absolute;
+    border-left: 2px solid red ;
+    height: 100%;
+    z-index:2;
+}
+
+.vertical-rule{
+    position: absolute;
+    border-top: 2px solid red;
+    width: 100%;
+    z-index: 2;
+}
+
+.planet{
+    position: absolute;
+}
+
+.noise {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.announcement {
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    height: 70px;
+    width: 120px;
+    background-color: grey;
+    border: 1px solid black;
+}
+
+.show {
+    display: block;
+}

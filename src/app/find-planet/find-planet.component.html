@@ -1,0 +1,16 @@
+
+<div class='world'
+  (mousemove) = 'move($event)'>
+  <!--<div class = 'space'></div>-->
+  <img class='noise' 
+    [style.opacity] = 'calculateOpacity()' src="/assets/noise.jpg">
+  <div class='horizontal-rule' [style.left.px] = 'mouseX'></div>
+  <div class='vertical-rule' [style.top.px] = 'mouseY'></div>
+  <div class = 'announcement' [class.show] = 'calculateOpacity() < 0.05' > Planet Found </div>
+  <img class='planet'
+    [style.height.px] = 'planet.planetSize' 
+    [style.width.px] = 'planet.planetSize' 
+    [style.left.px] = 'planet.xPosition' 
+    [style.top.px] = 'planet.yPosition' 
+    src="/assets/planet.gif">
+</div>

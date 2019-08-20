@@ -1,0 +1,5 @@
+<select name="data" (change) = 'selectSource($event.target.value)' >
+  <option *ngFor='let source of availableSources' [value]='source'>{{source}}</option>
+  
+</select>
+<iframe *ngIf = 'selectedSource' [src] = 'selectedSource'></iframe>

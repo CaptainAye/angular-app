@@ -1,0 +1,6 @@
+<form #form='ngForm' (ngSubmit) = 'onSubmit(form)'>
+  <select name='selectedShip' ngModel required>
+    <option *ngFor = 'let ship of ships$ | async, index as index' [value]='index'>{{ship.modelName}}</option>
+  </select>
+  <button type='submit' [disabled] = 'form.invalid'>Destroy ships</button>
+</form>

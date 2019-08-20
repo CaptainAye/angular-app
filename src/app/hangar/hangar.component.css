@@ -1,0 +1,13 @@
+h1 {
+    font-size: 250%;
+    color: white;
+}
+
+.ships {
+    height: 100%;
+    min-height: 500px;
+}
+
+a {
+    color: white;
+}

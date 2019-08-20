@@ -1,0 +1,20 @@
+<h1> Battle ships hangar</h1>
+<div class='container'>
+  <div class='row'>
+<div class='col-6 ships'>
+  <h2>Battle ships</h2>
+  <app-space-ship *ngFor = 'let spaceShip of hangarStream$ | async' [spaceShip] = 'spaceShip'>
+  <button type="button" *ngIf='selectedPilot && !spaceShip.pilot' (click) = 'assignPilot(spaceShip)'>Pilotuj</button>
+  <button type="button" *ngIf='spaceShip.pilot' (click) = 'deassignPilot(spaceShip)'>Opusc</button>
+</app-space-ship>
+</div>
+  <app-pilot-room class=col-6 (pilotSelected) = 'selectPilot($event)'></app-pilot-room>
+  
+  <div class = 'col-6'>
+  <a routerLink="/hangar" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Production</a>
+  <a routerLink="/hangar/trash" routerLinkActive="active">Utilization</a>
+  <router-outlet></router-outlet>
+</div>
+</div>
+</div>
+

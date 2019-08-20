@@ -1,0 +1,17 @@
+:host {
+    background-image: url('/assets/black_hole.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+}
+
+a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: red;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: grey;
+}

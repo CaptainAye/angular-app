@@ -1,0 +1,50 @@
+:host {
+    float: left;
+    margin : 10px;
+}
+
+.inactive {
+    display: none;
+}
+
+img.ship {
+    height: 10em;
+    width: 10em;
+}
+
+img {
+    height: 1em;
+    width: 1em;
+}
+
+.property-state{
+    display: inline;
+}
+
+.pilot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2em;
+    width: 2em;
+}
+
+.progressBar {
+    height: 10px;
+    fill: green;
+    border: 1px solid green;
+    background-color: green;
+}
+
+.healthBar {
+    margin-top: 5px;
+    border: 1px solid red;
+    background-color: red;
+}
+
+.ship-model {
+    position: relative;
+    height: 60%;
+    width: 100%;
+}
+

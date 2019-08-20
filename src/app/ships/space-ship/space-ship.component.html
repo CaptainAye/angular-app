@@ -1,0 +1,26 @@
+<div class ='ship-model'>
+  <img class = 'ship' appSpaceImage [src] = 'spaceShip.imageUrl'>
+    <img class='pilot' 
+    [src] = 'spaceShip.pilot.imageUrl' 
+    *ngIf='spaceShip.pilot' 
+    [title] = 'spaceShip.pilot.name'>
+</div>
+<div><span>{{spaceShip.modelName | shipName: spaceShip.pilot?.name}}</span></div> 
+<div class='properties'>
+<div class='property-state' [title]="'Shields ' + (spaceShip.activeShields ? 'active' : 'inactive')">
+  <!-- <label>Shield</label> -->
+  <img [class.inactive]='!spaceShip.activeShields' src="/assets/shield.ico">
+</div>
+
+<div class='property-state'  [title]="'spaceShip.Weapons ' + (activeWeapons ? 'active' : 'inactive')">
+  <!--<label>Weapon</label>-->
+  <img [class.inactive]='!spaceShip.activeWeapons' src="/assets/cannon.png">
+</div>
+</div>
+<ng-content></ng-content>
+
+<!--<div><span>Health bar</span></div>-->
+<div class='healthBar'>
+  <div class='progressBar' [style.width.%]='spaceShip.health' [title]="spaceShip.health + '%'"></div>
+
+</div>

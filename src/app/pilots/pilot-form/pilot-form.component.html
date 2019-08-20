@@ -1,0 +1,26 @@
+<div class='pilot-form'>
+<form *ngIf="form$ | async as form" [formGroup]="form" (ngSubmit)='onSubmit(form)'>
+    <h2>{{form.id ? 'Edycja pilota' : 'Dodawanie pilota'}}</h2>
+  <div class='container'>
+    <div class='row'>
+    <div class='col-6'>
+    <input class='control-property' type="text" formControlName="firstName" />
+    <span class="error" *ngIf="form.get('firstName').hasError('containsCapitalLetter') || form.get('lastName').hasError('containsCapitalLetter')">Needs to be in capital!</span>   
+    <input class = 'control-property' type="text" formControlName="lastName"/>
+    <span class="error" *ngIf="form.get('lastName').hasError('pilotUniq')">Already exists</span>
+    <input class = 'control-property' type="text" formControlName="imageUrl"/>
+  </div>
+    <div class='col-6'>
+      <img id='pilot-photo' #avatar
+        (error)="avatar.src = defaultAvatarUrl"
+        [src]="form.get('imageUrl').value || defaultAvatarUrl"/>
+    </div>
+  </div>
+  <div class='row'></div>
+
+    <button class='button-property-left' type="submit" [disabled]="form.invalid">Zapisz</button>
+    <button class='button-property-right' type="button" routerLink="/">Anuluj</button>
+    <span class="error" *ngIf="form.get('firstName').hasError('required') && form.get('firstName').touched">jest wymagane</span>
+  </div>
+</form>
+</div>
